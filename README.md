@@ -1,11 +1,8 @@
-# JS-ChaCha20
-Pure JavaScript ChaCha20 stream cipher
+# ChaCha20.js
 
-[![Build Status](https://travis-ci.org/thesimj/js-chacha20.svg?branch=master)](https://travis-ci.org/thesimj/js-chacha20)
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+A Pure JavaScript ChaCha20 stream cipher ES module
 
-
-### Abstract
+## Abstract
 ChaCha20 is a stream cipher designed by D. J. Bernstein. 
 It is a refinement of the [Salsa20](https://github.com/thesimj/js-salsa20) algorithm, and it uses a 256-bit key.
 
@@ -28,38 +25,25 @@ ChaCha20 and Poly1305 for IETF Protocols
 - https://tools.ietf.org/pdf/rfc7539.pdf
 - https://cr.yp.to/chacha/chacha-20080128.pdf
 
-### Install
-```
-npm install js-chacha20 --save
-```
-
-### Usage
-Encrypt message with key and nonce
+## Usage
+Encrypt and decrypt message with key and nonce
 ```javascript
-import JSChaCha20 from "js-chacha20";
+import { ChaCha20 } from "https://code4fukui.github.io/ChaCha20/ChaCha20.js";
 
-const key = Uint8Array([...]); // 32 bytes key
-const nonce = Uint8Array([...]); // 12 bytes nonce
-const message = Uint8Array([...]); // some data as bytes array
+const key = new Uint8Array(32); // 32 bytes key
+const nonce = new Uint8Array(12); // 12 bytes nonce
+const message = new TextEncoder().encode("test"); // some data as bytes array
 
 // Encrypt //
-const encrypt = new JSChaCha20(key, nonce).encrypt(message);
+const encrypt = new ChaCha20(key, nonce).encrypt(message);
 
 // now encrypt contains bytes array of encrypted message
-```
 
-Decrypt encrypted message with key and nonce
-```javascript
-import JSChaCha20 from "js-chacha20";
-
-const key = Uint8Array([...]); // 32 bytes key
-const nonce = Uint8Array([...]); // 12 bytes nonce
-const encrypt = Uint8Array([...]); // some data as bytes array
-
-// Encrypt //
-const message = new JSChaCha20(key, nonce).decrypt(encrypt);
+// Decrypt //
+const message2 = new ChaCha20(key, nonce).decrypt(encrypt);
 
 // now message contains bytes array of original message
+console.log(new TextDecoder().decode(message2));
 ```
 
 That all. If something happens, Error will be thrown.
