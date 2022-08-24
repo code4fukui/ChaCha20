@@ -1,5 +1,5 @@
 import * as t from "https://deno.land/std/testing/asserts.ts";
-import { ChaCha20 } from "./jschacha20.js";
+import { ChaCha20 } from "./ChaCha20.js";
 import { rnd } from "https://js.sabae.cc/rnd.js";
 
 Deno.test("simple", () => {
