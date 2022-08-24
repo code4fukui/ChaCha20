@@ -1,4 +1,3 @@
-'use strict'
 /*
  * Copyright (c) 2017, Bubelich Mykola
  * https://www.bubelich.com
@@ -251,7 +250,4 @@ JSChaCha20.prototype._update = function (data) {
   return output
 }
 
-// EXPORT //
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = JSChaCha20
-}
+export const ChaCha20 = JSChaCha20;
