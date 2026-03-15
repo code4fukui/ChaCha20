@@ -1,6 +1,6 @@
 # ChaCha20.js
 
-Pure JavaScript ChaCha20 stream cipher ES modululeです。
+Pure JavaScript ChaCha20ストリーム暗号ES Moduleです。
 
 ## 機能
 - ChaCha20ストリーム暗号アルゴリズムを実装
@@ -9,7 +9,7 @@ Pure JavaScript ChaCha20 stream cipher ES modululeです。
 - RFC7539の仕様に準拠
 
 ## 使い方
-キーとノンスを使ってメッセージの暗号化と復号化:
+キーとノンスを使ってメッセージの暗号化と復号化を行えます:
 
 ```javascript
 import { ChaCha20 } from "https://code4fukui.github.io/ChaCha20/ChaCha20.js";

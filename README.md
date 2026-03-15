@@ -1,5 +1,7 @@
 # ChaCha20.js
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A Pure JavaScript ChaCha20 stream cipher ES module.
 
 ## Features
