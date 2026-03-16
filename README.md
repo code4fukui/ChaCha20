@@ -30,4 +30,4 @@ console.log(new TextDecoder().decode(decrypted)); // Output: "test"
 ```
 
 ## License
-MIT License
+MIT License — see [LICENSE](LICENSE).

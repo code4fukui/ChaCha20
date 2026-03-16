@@ -1,6 +1,6 @@
 # ChaCha20.js
 
-Pure JavaScript ChaCha20ストリーム暗号ES Moduleです。
+Pure JavaScriptで実装したChaCha20ストリーム暗号のES Moduleです。
 
 ## 機能
 - ChaCha20ストリーム暗号アルゴリズムを実装
